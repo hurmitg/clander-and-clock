@@ -1,0 +1,236 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-weight: bold;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.container{
+    width: 96vw;
+    height: 96vh;
+    margin-top: 2vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.clndr{
+    width: 47%;
+    height: 100%;
+}
+
+.time{
+    width: 47%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+
+
+
+/* ---> Alarm css */
+
+.alarmArea{
+    height: 55%;
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: #222227;
+    color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    box-shadow: 0 0.5rem 3rem rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.alarmhead{
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+#alarm{
+    border-radius: 5px;
+    border: 1px solid black;
+    max-width: 100%;
+    padding: 5px 10px;
+    margin-bottom: 2%;
+}
+
+.btn{
+    color: white;
+    font-weight: 600;
+}
+
+.btn:hover{
+    color: black;
+}
+
+
+/* ---> Clock css */
+
+.clock{
+    height: 30%;
+    width: 100%;
+    border: 2px solid black;
+    background-color: #222227;
+    color: white;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    box-shadow: 0 0.5rem 3rem rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.currentTime{
+    font-size: 3rem;
+    font-family: 'VT323', monospace;
+}
+.currentDate{
+    font-size: 1.5rem;
+}
+
+
+
+
+
+
+/* ---> Calendar css */
+
+.box{
+    width: 100%;
+    height: 100%;
+    color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calendar{
+    width: 28.125rem;
+    height: 33.5rem;
+    border: 0.3px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #222227;
+    box-shadow: 0 0.5rem 3rem rgba(0,0,0,0.4);
+}
+
+.currentDate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    height: 2.5rem;
+    background-color: #167e56;
+}
+
+.month{
+    width: 100%;
+    height: 5.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.25rem;
+    text-align: center;
+    text-shadow: 0 0.3rem 0.5rem rgba(0,0,0,0.5);
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.month i{
+    font-size: 1.5625rem;
+    cursor: pointer;
+    color: white;
+}
+
+.currentMonth{
+    font-size: 1.875rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+}
+
+.currentYear{
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.weekdays{
+    width: 100%;
+    height: 3.125rem;
+    padding: 0 0.4rem;
+    display: flex;
+    align-items: center;
+}
+
+.weekdays div{
+    font-size: 0.9375rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    width: calc(44.2rem/7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.days{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.2rem;
+}
+
+.days div{
+    font-size: 0.875rem;
+    margin: 0.3rem;
+    width: calc(23.25rem/7);
+    height: 3.125rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.days div:hover:not(.today) {
+    background-color: #262626;
+    border: 0.2rem solid #777;
+    cursor: pointer;
+}
+
+.prev-date, .next-date{
+    opacity: 0.5;
+}
+
+.today{
+    background-color: #167e56;
+    border-radius: 50%
+}
+
+
+@media screen and (max-width: 700px) and (min-width: 350px){
+    .container{
+        width: 100vw;
+        height: 150vh;
+        margin-top: 2vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .clndr{
+        width: 90%;
+        height: 50%;
+    }
+    .time{
+        width: 90%;
+        height: 50%;
+    }
+}

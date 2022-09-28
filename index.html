@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date & Time</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body onload="updateclock(); setInterval('updateclock()',1000)">
+    <div class="container">
+        <div class="clndr">
+            <div class="box">
+                <div class="calendar">
+                    <div class="currentDate"></div>
+                    <div class="month">
+                        <i class="fas fa-angle-left prev"></i>
+                        <div class="date">
+                            <div class="currentMonth"></div>
+                           <div class="currentYear"></div>
+                        </div>
+                        <i class="fas fa-angle-right next"></i>
+                    </div>
+                    <div class="weekdays">
+                        <div>Sun</div>
+                        <div>Mon</div>
+                        <div>Tue</div>
+                        <div>Wed</div>
+                        <div>Thu</div>
+                        <div>Fri</div>
+                        <div>Sat</div>
+                    </div>
+                    <div class="days">
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="time">
+            <div class="clock">
+                <div class="currentTime"></div>
+            </div>
+
+            <div class="alarmArea">
+                <div class="alarmhead">Set Alarm :</div>
+                <input type="datetime-local" id="alarm" name="alarm">
+                <span>
+                    <button type="submit" class="btn btn-success" id="alarmsubmit">Set alarm</button>
+                    <button type="submit" class="btn btn-warning" id="alarmstop" onclick="snooze()">Snooze</button>
+                   <button type="submit" class="btn btn-danger" id="alarmstop" onclick="stop()">Dismiss</button>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <audio id="my-audio" controls style="display:none">
+        <source src="audios/alarm.mp3" type="audio/mpeg">
+    </audio>
+</body>
+
+
+<script src="alarm.js"></script>
+</html>
